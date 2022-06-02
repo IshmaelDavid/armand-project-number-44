@@ -1,0 +1,1727 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --darkGreen: rgba(0, 107, 56, 1);   /* #006b38 */
+    --lightBlack: rgba(16, 24, 32, 1);  /* #101820 */
+    --lightWood: rgba(252, 215, 112, 1); /* #fcd770 */
+    --lightBlue: rgba(163, 212, 247, 1); /* #a3d4f7 */
+}
+
+
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+
+#preloader{
+    background: var(--darkGreen) url('preloader.gif') no-repeat;
+    background-position: center;
+    background-size: 100px;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 9000;
+    overflow: hidden;
+}
+
+.movingObjects{
+    height: 100vh;
+    width: 100vw;
+    z-index: -1000;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, var(--darkGreen), var(--lightBlack));
+}
+
+.movingObjects div{
+    opacity: 0.2;
+}
+
+.object1{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: brown;
+    border-radius: 50%;
+    animation-name: object1;
+    animation-duration: 60s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes object1 {
+    0%{
+        top: 0;
+        left: 0;
+        background-color: bisque;
+    }
+    10%{
+        top: 30%;
+        left: 20%;
+        background-color: cadetblue;
+        height: 30px;
+        width: 30px;
+    }
+    30%{
+        top: 40%;
+        left: 0%;
+        background-color: gold;
+        height: 70px;
+        width: 70px;
+    }
+    40%{
+        top: 90%;
+        left: 80%;
+        background-color: orangered;
+        height: 37px;
+        width: 37px;
+    }
+    70%{
+        top: 0;
+        left: 80%;
+        background-color: violet;
+        height: 120px;
+        width: 120px;
+    }
+    90%{
+        top: 50%;
+        left: 50%;
+        background-color: midnightblue;
+        height: 49px;
+        width: 49px;
+    }
+    100%{
+        top: 80%;
+        left: 40%;
+        background-color: lemonchiffon;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.object2 {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    bottom: 0%;
+    right: 0%;
+    background-color:lightsalmon;
+    animation-name: object2;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes object2 {
+    0% {
+        top: 70%;
+        left: 70%;
+        background-color: bisque;
+    }
+
+    20% {
+        top: 30%;
+        left: 20%;
+        background-color: cadetblue;
+        height: 30px;
+        width: 30px;
+    }
+
+    30% {
+        top: 40%;
+        left: 0%;
+        background-color: gold;
+        height: 70px;
+        width: 70px;
+    }
+
+    50% {
+        top: 90%;
+        left: 80%;
+        background-color: orangered;
+        height: 37px;
+        width: 37px;
+    }
+
+    70% {
+        top: 0;
+        left: 80%;
+        background-color: violet;
+        height: 120px;
+        width: 120px;
+    }
+
+    80% {
+        top: 50%;
+        left: 50%;
+        background-color: midnightblue;
+        height: 49px;
+        width: 49px;
+    }
+
+    100% {
+        top: 10%;
+        left: 40%;
+        background-color: lemonchiffon;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.object3{
+    position: absolute;
+    height: 80px;
+    width: 30px;
+    bottom: 10%;
+    right: 70%;
+    background-color:indigo;
+    animation-name: object3;
+    animation-duration: 120s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes object3 {
+    0% {
+        top: 70%;
+        left: 70%;
+        background-color: bisque;
+    }
+
+    27% {
+        top: 30%;
+        left: 20%;
+        background-color: cadetblue;
+        height: 30px;
+        width: 30px;
+    }
+
+    32% {
+        top: 40%;
+        left: 0%;
+        background-color: gold;
+        height: 70px;
+        width: 70px;
+    }
+
+    44% {
+        top: 90%;
+        left: 80%;
+        background-color: orangered;
+        height: 37px;
+        width: 37px;
+    }
+
+    62% {
+        top: 0;
+        left: 80%;
+        background-color: violet;
+        height: 120px;
+        width: 120px;
+    }
+
+    83% {
+        top: 50%;
+        left: 50%;
+        background-color: midnightblue;
+        height: 49px;
+        width: 49px;
+    }
+
+    100% {
+        top: 10%;
+        left: 40%;
+        background-color: lemonchiffon;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.object4 {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: brown;
+    border-radius: 50%;
+    animation-name: object4;
+    animation-duration: 200s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes object4 {
+    0% {
+        top: 0;
+        left: 0;
+        background-color: bisque;
+    }
+
+    10% {
+        top: 30%;
+        left: 20%;
+        background-color: cadetblue;
+        height: 30px;
+        width: 30px;
+    }
+
+    30% {
+        top: 40%;
+        left: 0%;
+        background-color: gold;
+        height: 70px;
+        width: 70px;
+    }
+
+    40% {
+        top: 90%;
+        left: 80%;
+        background-color: orangered;
+        height: 37px;
+        width: 37px;
+    }
+
+    70% {
+        top: 0;
+        left: 80%;
+        background-color: violet;
+        height: 120px;
+        width: 120px;
+    }
+
+    90% {
+        top: 50%;
+        left: 50%;
+        background-color: midnightblue;
+        height: 49px;
+        width: 49px;
+    }
+
+    100% {
+        top: 80%;
+        left: 40%;
+        background-color: lemonchiffon;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.object5 {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    bottom: 0%;
+    right: 0%;
+    background-color: lightsalmon;
+    animation-name: object5;
+    animation-duration: 200s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes object5 {
+    0% {
+        top: 10%;
+        left: 70%;
+        background-color: bisque;
+    }
+
+    20% {
+        top: 90%;
+        left: 20%;
+        background-color: cadetblue;
+        height: 30px;
+        width: 30px;
+    }
+
+    30% {
+        top: 40%;
+        left: 70%;
+        background-color: gold;
+        height: 70px;
+        width: 70px;
+    }
+
+    50% {
+        top: 20%;
+        left: 80%;
+        background-color: orangered;
+        height: 37px;
+        width: 37px;
+    }
+
+    70% {
+        top: 0;
+        left: 90%;
+        background-color: violet;
+        height: 120px;
+        width: 120px;
+    }
+
+    80% {
+        top: 20%;
+        left: 50%;
+        background-color: midnightblue;
+        height: 49px;
+        width: 49px;
+    }
+
+    100% {
+        top: 10%;
+        left: 0%;
+        background-color: lemonchiffon;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.object6 {
+    position: absolute;
+    height: 80px;
+    width: 30px;
+    background-color: indigo;
+    animation-name: object6;
+    animation-duration: 80s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes object6 {
+    0% {
+        top: 0%;
+        left: 0%;
+        background-color: bisque;
+    }
+
+    27% {
+        top: 10%;
+        left: 820%;
+        background-color: cadetblue;
+        height: 30px;
+        width: 30px;
+    }
+
+    32% {
+        top: 40%;
+        left: 40%;
+        background-color: gold;
+        height: 70px;
+        width: 70px;
+    }
+
+    44% {
+        top: 10%;
+        left: 80%;
+        background-color: orangered;
+        height: 37px;
+        width: 37px;
+    }
+
+    62% {
+        top: 0;
+        left: 20%;
+        background-color: violet;
+        height: 120px;
+        width: 120px;
+    }
+
+    83% {
+        top: 20%;
+        left: 50%;
+        background-color: midnightblue;
+        height: 49px;
+        width: 49px;
+    }
+
+    100% {
+        top: 40%;
+        left: 40%;
+        background-color: lemonchiffon;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+/* THE HOME PAGE */
+#homePage{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* The left Box that contains moving car and 3 words */
+.animationContainer{
+    display: flex;
+    align-items: center;
+    position: relative;
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    left: 4%;
+}
+
+/* The left Box that contains moving car */
+.movingLogoBox{
+    position: relative;
+    position: absolute;
+    top: 20%;
+    height: 200px;
+    width: 400px;
+    overflow: hidden;
+    z-index: 1000;
+}
+.movingLogoBox img:first-child{
+    position: absolute;
+    height: 100px;
+    width: auto;
+    bottom: -2%;
+    left: 0;
+}
+.movingLogoBox img:nth-child(2){
+    position: absolute;
+    height: 100px;
+    width: auto;
+    bottom: -2%;
+    left: 22%;
+}
+
+.movingLogoBox img:nth-child(3){
+    position: absolute;
+    height: 100px;
+    width: auto;
+    bottom: -2%;
+    right: 30%;
+}
+.movingLogoBox img:nth-child(4){
+    position: absolute;
+    height: 180px;
+    width: 100px;
+    bottom: -8%;
+    right: 5%;
+    z-index: 1;
+}
+
+.movingLogoBox img:nth-child(5){
+    position: absolute;
+    right: -18%;
+    bottom: -3%;
+    height: 70px;
+    z-index: 2;
+    animation-name: movingCar;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes movingCar {
+    from{
+        right: -18%;
+        bottom: -2%;
+    }
+    to{
+        right: 100%;
+        bottom: -2%;
+    }
+}
+
+
+/* Contains 3 words */
+.movingText {
+    position: relative;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40%;
+    width: 100%;
+    bottom: 0%;
+    padding-left: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.movingText h3 {
+    background-image: linear-gradient(to right, rgba(163, 212, 247, 255), rgba(252, 215, 112, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.movingText h3:first-child {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation-name: text1;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+.movingText h3:nth-child(2) {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    animation-name: text2;
+    animation-delay: 4s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+.movingText h3:nth-child(3) {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    animation-name: text3;
+    animation-delay: 7s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+@keyframes text1 {
+    0% {
+        left: 100%;
+    }
+
+    8.3% {
+        left: 10%;
+    }
+
+    16.6% {
+        left: 68%;
+    }
+
+    24.9% {
+        left: 10%;
+    }
+
+    33.2% {
+        left: 60%;
+    }
+
+    41.5% {
+        left: 10%;
+    }
+
+    49.8% {
+        left: 50%;
+    }
+
+    58.1% {
+        left: 10%;
+    }
+
+    66.4% {
+        left: 40%;
+    }
+
+    74.7% {
+        left: 10%;
+    }
+
+    83% {
+        left: 30%;
+    }
+
+    100% {
+        left: 10%;
+    }
+}
+
+@keyframes text2 {
+    0% {
+        left: 100%;
+    }
+
+    8.3% {
+        left: 10%;
+    }
+
+    16.6% {
+        left: 68%;
+    }
+
+    24.9% {
+        left: 10%;
+    }
+
+    33.2% {
+        left: 60%;
+    }
+
+    41.5% {
+        left: 10%;
+    }
+
+    49.8% {
+        left: 50%;
+    }
+
+    58.1% {
+        left: 10%;
+    }
+
+    66.4% {
+        left: 40%;
+    }
+
+    74.7% {
+        left: 10%;
+    }
+
+    83% {
+        left: 30%;
+    }
+
+    100% {
+        left: 10%;
+    }
+}
+
+@keyframes text3 {
+    0% {
+        left: 100%;
+    }
+
+    8.3% {
+        left: 10%;
+    }
+
+    16.6% {
+        left: 68%;
+    }
+
+    24.9% {
+        left: 10%;
+    }
+
+    33.2% {
+        left: 60%;
+    }
+
+    41.5% {
+        left: 10%;
+    }
+
+    49.8% {
+        left: 50%;
+    }
+
+    58.1% {
+        left: 10%;
+    }
+
+    66.4% {
+        left: 40%;
+    }
+
+    74.7% {
+        left: 10%;
+    }
+
+    83% {
+        left: 30%;
+    }
+
+    100% {
+        left: 10%;
+    }
+}
+
+
+/* THE BOX THAT CONTAINS ROTATING IMAGES */
+
+.sliderBox {
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 70%;
+    height: 100%;
+    position: relative;
+}
+
+.slider {
+    position: relative;
+    position: absolute;
+    top: 45%;
+    right: 0%;
+    width: 200px;
+    height: 200px;
+    transform: translateY(-100%);
+    transform-style: preserve-3d;
+    animation: rotate 120s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slider span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*70deg)) translateZ(300px);
+}
+
+.slider span img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translateX(-50%);
+    margin: auto;
+    border-radius: 20%;
+    object-fit: cover;
+    transition: 2s;
+    border: 0px solid var(--lightBlue);
+    box-shadow: 0px 0px 10px 0px var(--lightBlue);
+    transition: 0.4s;
+}
+
+
+.slider span p {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--lightBlue);
+    font-size: 0.7rem;
+}
+
+
+
+
+/* THE BOX THAT CONTAINS BOTH THE LOGO AND NAVIGATION LINKS */
+
+.logo{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vw;
+    width: 20vw;
+    max-width: 100px;
+    max-height: 100px;
+    overflow: hidden;
+    border-radius: 20%;
+    background-color: var(--lightBlue);
+    box-shadow: 0px 0px 20px 0px black;
+    
+}
+
+
+
+/* Navigation Box */
+.logo img {
+    height: 120px;
+    object-fit: cover;
+}
+
+nav {
+    position: fixed;
+    top: 4%;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    z-index: 7000;
+}
+
+.menu{
+    display: flex;
+    border-radius: 20px;
+    background: linear-gradient(to left, rgba(16, 24, 32, 0.7),rgba(0, 107, 56, 0.7));
+    padding: 48px;
+}
+
+.menu li{
+    position: relative;
+    list-style: none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 00.4s ease-in-out;
+}
+
+.menu li:hover a{
+    color: var(--lightBlack);
+}
+
+.menu li a{
+    text-decoration: none;
+    color: var(--lightBlue);
+}
+
+.menu div{
+    position: relative;
+}
+
+.menu div:first-child,
+.menu div:nth-child(2),
+.menu div:nth-child(3),
+.menu div:nth-child(4),
+.menu div:nth-child(5) {
+    transition: 0.4s ease-in-out;
+}
+
+.menu div div:first-child {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.1s ease-in-out;
+}
+
+.menu .fas{
+    position: absolute;
+    left: 50%;
+    top: 140%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    display: none;
+}
+
+.home:hover .fa-home{
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-duration: 0.4s;
+    display: block;
+}
+
+.aboutUs:hover .fa-lightbulb {
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-duration: 0.4s;
+    display: block;
+}
+
+.services:hover .fa-coffee {
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-duration: 0.4s;
+    display: block;
+}
+
+.testimonies:hover .fa-smile {
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-duration: 0.4s;
+    display: block;
+}
+
+.contactUs:hover .fa-phone {
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-duration: 0.4s;
+    display: block;
+}
+
+@keyframes slide {
+    0% {
+        font-size: 1.2rem;
+        color: var(--lightWood);
+    }
+
+    100% {
+        font-size: 1.4rem;
+        color: var(--lightBlue);
+    }
+}
+
+.burger {
+    display: none;
+}
+
+.burger{
+    height: 36px;
+    cursor: pointer;
+    background-color: var(--lightBlue);
+    padding-top: 5px;
+    border-radius: 4px;
+}
+
+.burger div {
+    width: 24px;
+    height: 3px;
+    background-color: var(--darkGreen);
+    margin: 4px;
+    transition: all 0.5s ease;
+}
+
+
+/* FIXED SOCIAL MEDIA ICONS */
+.socialMedia{
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    width: 30px;
+    position: fixed;
+    bottom: 20px;
+    left: 2vw;
+}
+
+.socialMedia img{
+    height: 30px;
+    transition: 0.4s ease-in-out;
+}
+
+.socialMedia .linkedinIcon{
+    box-shadow: 0px 0px 10px 0px inset rgba(179, 64, 74, 1),
+                0px 0px 20px 0px inset rgba(179, 64, 74, 1);
+}
+.socialMedia .twitterIcon{
+    box-shadow: 0px 0px 10px 0px inset rgba(255, 198, 27, 1),
+                0px 0px 20px 0px inset rgba(255, 198, 27, 1);
+}
+
+.socialMedia .facebookIcon{
+    box-shadow: 0px 0px 10px 0px inset rgba(207, 240, 158, 1),
+                0px 0px 20px 0px inset rgba(207, 240, 158, 1);
+}
+
+.socialMedia img:hover {
+    box-shadow: none;
+}
+
+
+
+
+/* FIXED BACK TO TOP ICON BOX */
+
+#backToTop{
+    position: relative;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    height: 70px;
+    width: 70px;
+    z-index: 2000;
+    display: none;
+}
+.backToTop img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 107, 56, 0.4),
+                inset 0px 0px 20px 0px rgba(0, 107, 56, 0.4),
+                inset 0px 0px 30px 0px rgba(0, 107, 56, 0.4),
+                inset 0px 0px 40px 0px rgba(0, 107, 56, 0.4),
+                inset 0px 0px 50px 0px rgba(0, 107, 56, 0.4)
+    ;
+    cursor: pointer;
+    transition: 0.9s ease-in-out;
+}
+.backToTop img:hover{
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 107, 56, 0.4),
+                inset 0px 0px 20px 0px rgba(0, 107, 56, 0.4),
+                inset 0px 0px 30px 0px rgba(0, 107, 56, 0.4)
+    ;
+    
+}
+
+.backToTop:hover img{
+    transform: rotateY(360deg);
+}
+.backToTop p{
+    position: absolute;
+    bottom: -38%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    background-image: linear-gradient(to right, var(--darkGreen), var(--lightWood));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.overlay{
+    position: absolute;
+    width: 0%;
+    height: 140%;
+    top: -120%;
+    border-radius: 30px;
+    background-color: var(--lightBlue);
+    z-index: -1;
+    opacity: 1;
+    transition: 0.4s ease-in-out;
+}
+
+.home:hover .overlay,
+.aboutUs:hover .overlay,
+.services:hover .overlay,
+.testimonies:hover .overlay,
+.contactUs:hover .overlay
+{
+    width: 100%;
+}
+
+
+
+
+/* ABOUT US SECTION */
+
+#aboutUsPage{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+#aboutUsPage .about{
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin-top: 20px;
+    padding: 0 30px;
+}
+.about img:only-of-type{
+    height: 200px;
+    width: auto;
+}
+
+#aboutUsPage .about .aboutContent{
+    width: 70%;
+    padding-left: 10px;
+    display: flex;
+
+}
+
+#aboutUsPage .about .aboutContent .mission{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 10px;
+    margin: 0 10px;
+    width: 50%;
+}
+
+#aboutUsPage .about .aboutContent img{
+    height: 40px;
+}
+#aboutUsPage .about .aboutContent h6{
+    background-image: linear-gradient(to right, var(--darkGreen), var(--lightWood));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+#aboutUsPage .about .aboutContent p{
+    font-size: 14px;
+    text-align: justify;
+    background-image: linear-gradient(to left, var(--lightBlue), var(--lightBlue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#aboutUsPage .about .aboutContent p::first-letter,
+#servicesPage .servicesContainer .serviceBlock .serviceContent p::first-letter{
+     background-image: linear-gradient(to right, var(--darkGreen), var(--lightWood));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.secondAboutContent,
+.thirdAboutContent,
+.forthAboutContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.secondAboutContent img{
+    height: 40px;
+}
+
+
+/* SERVICES PAGE */
+
+#servicesPage{
+    margin-top: 20px;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#servicesPage .servicesContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#servicesPage .servicesContainer .serviceBlock {
+    position: relative;
+    width: 30%;
+    border-radius: 10px;
+    padding-top: 60px;
+    margin: 50px 5vw;
+}
+
+#servicesPage .servicesContainer .serviceBlock .serviceImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: var(--lightBlue);
+    border: 8px solid var(--darkGreen);
+}
+
+#servicesPage .servicesContainer .serviceBlock .serviceImg img {
+    height: 70%;
+    width: 70%;
+}
+
+
+#servicesPage .servicesContainer .serviceBlock .serviceContent h4{
+    background-image: linear-gradient(to right, var(--darkGreen), var(--lightWood));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+#servicesPage .servicesContainer .serviceBlock .serviceContent h4::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, var(--darkGreen), var(--lightWood));
+    left: 0;
+    top: -10px;
+}
+
+
+#servicesPage .servicesContainer .serviceBlock .serviceContent h4::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to left, var(--darkGreen), var(--lightWood));
+    left: 0;
+    bottom: -10px;
+}
+
+#servicesPage .servicesContainer .serviceBlock .serviceContent p{
+    padding-top: 30px;
+    background-image: linear-gradient(to right, var(--lightBlue), var(--lightBlue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 14px;
+}
+
+
+/* TESTIMONIES SECTION */
+
+
+#testimoniesPage{
+    margin-top: 20px;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+}
+
+/* There was a bug here */
+#testimoniesPage .TestimoniesContainer {
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+} 
+
+#testimoniesPage .TestimoniesContainer .indicator{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15%;
+}
+
+#testimoniesPage .TestimoniesContainer .indicator .Tbtn{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 2px;
+    border-radius: 10px;
+    background-color: var(--lightWood);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+#testimoniesPage .TestimoniesContainer .indicator .active {
+    width: 25px;
+}
+
+#testimoniesPage .TestimoniesContainer .testimonial{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#testimoniesPage .TestimoniesContainer .testimonial .slideRow{
+    display: flex;
+    width: 3200px;
+    transition: 0.5s;
+}
+
+#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol{
+    width: 600px;
+    height: 300px;
+    margin: 0 100px;
+    position: relative;
+}
+
+#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg{
+    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg img{
+    height: 100%;
+    border-radius: 20px;
+}
+
+#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg .outline{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 97%;
+    width: 97%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    border: 4px solid rgba(0, 107, 56, 1);
+}
+
+#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText{
+    background: linear-gradient(to left, rgba(252, 215, 112, 0), rgba(252, 215, 112, 0.6));
+    width: 430px;
+    height: 270px;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    color: #d3d4d6;
+    padding: 35px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+}
+
+#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText p{
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--lightBlue);
+}
+
+#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText h3{
+    margin: 15px 0 5px;
+    color: var(--lightBlue);
+    font-size: 16px;
+}
+
+#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+}
+
+
+
+
+
+
+
+/* POP UP PAGE FOR CONTACT FORM */
+
+.popUpForm{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, rgba(16, 24, 32, 0.4), rgba(16, 24, 32, 0.9));
+    z-index: 8000;
+}
+
+.contactForm{
+    height: 800px;
+    width: 80%;
+    background-color: var(--lightBlue);
+
+}
+
+
+/* MEDIA QUERRIES AND RESPONSIVENESS */
+
+@media only screen and (min-width: 1200px){
+    nav{
+        justify-content: space-around;
+        margin: auto;
+    }
+
+    .burger {
+        display: none;
+    }
+    
+    #homePage{
+        max-width:1800px;
+        margin: auto;
+    }
+    #aboutUsPage{
+        max-width: 2000px;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .burger {
+            display: none;
+        }
+    .slider {
+            width: 200px;
+            height: 200px;
+        }
+    .slider span {
+            transform: rotateY(calc(var(--i)*70deg)) translateZ(200px);
+        }
+}
+
+@media only screen and (max-width: 950px){
+    .animationContainer{
+        display: none;
+    }
+
+    .sliderBox{
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+    }
+
+    .slider{
+        position: absolute;
+        top: 40%;
+        right: 40%;
+        transform: translate(50%, 50%);
+    }
+
+    .slider span {
+            transform: rotateY(calc(var(--i)*70deg)) translateZ(300px);
+        }
+    .menu{
+        position: absolute;
+	  	right: 0;
+	  	height: 400px;
+	  	top: 12vh;
+	  	display: flex;
+	  	flex-direction: column;
+	  	align-items: center;
+        justify-content: space-around;  
+	  	width: 300px;
+	  	transform: translateX(100%);
+	  	transition: transform 0.4s ease-in;
+        }  
+    .menu li{
+        opacity: 0;
+    }
+
+    .burger {
+  		display: block;
+	}
+
+    .menu-active{
+		transform: translateX(0%);
+	}
+
+    nav{
+        justify-content: space-around;
+    }
+
+    @keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+    .oblique .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+    
+    .oblique .line2 {
+            opacity: 0;
+        }
+    
+    .oblique .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+    .slider span p{
+        font-size: 1rem;
+        }
+    .about img:only-of-type {
+            height: 100px;
+        }
+    #aboutUsPage{
+        padding: 40px 20px;
+    }    
+    
+}
+
+@media only screen and (max-width: 725px){
+    .slider{
+        right: 35%;
+        width: 200px;
+        height: 200px;
+        }
+    .slider span {
+            transform: rotateY(calc(var(--i)*70deg)) translateZ(240px);
+        }
+    .about{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+    .aboutContent{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    #aboutUsPage .about .aboutContent .mission{
+        width: 100%;
+    }
+    .secondAbout,
+    .forthAbout{
+        flex-direction: column-reverse;
+    }
+    #servicesPage .servicesContainer .serviceBlock{
+        width: 50%;
+    }
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol{
+        width: 500px;
+        height: 300px;
+        margin: 0 150px;
+        position: relative;
+        }
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText{
+        width: 350px;
+        padding: 35px;
+        height: 100%;
+        padding-right: 60px;
+        }  
+    #testimoniesPage .TestimoniesContainer {
+        top: 200%;
+        left: -10%;
+        padding-left: 60vw;
+        }
+
+    #testimoniesPage .TestimoniesContainer .indicator{
+        margin-left: 60vw;
+        }
+     
+}
+
+@media only screen and (max-width: 570px){
+    .slider{
+        right: 30%;
+        }
+    .slider span {
+            transform: rotateY(calc(var(--i)*70deg)) translateZ(200px);
+        }    
+    #servicesPage .servicesContainer .serviceBlock{
+        width: 80%;
+        }    
+    #aboutUsPage .about .aboutContent{
+        width: 100%;
+        }
+    #aboutUsPage .about .aboutContent p{
+        text-align: center;
+        }
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol{
+        width: 300px;
+        height: 300px;
+        margin: 0 250px;
+        position: relative;
+        }
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText{
+        width: 100%;
+        height: 100%;
+        padding-right: 30px;
+        padding-left: 35px;
+        }
+    
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText p{
+        font-size: 12px;
+        }
+
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg{
+        position: absolute;
+        top: 10%;
+        right: -23%;
+        height: 40%;
+        }
+
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg img{
+        height: 100%;
+        border-radius: 20px;
+        }
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg .outline{
+        height: 90%;
+        width: 90%;
+        border: 2px solid rgba(0, 107, 56, 1);
+        }
+}
+
+@media only screen and (max-width: 470px) {
+    .slider {
+        right: 33%;
+        width: 140px;
+        height: 140px;
+    }
+
+    .slider span {
+        transform: rotateY(calc(var(--i)*70deg)) translateZ(180px);
+    }
+    .slider span p{
+        font-size: 0.8rem;
+        } 
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol{
+        width: 200px;
+        height: 300px;
+        margin: 0 300px;
+        }
+
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText{
+        padding-top: 10px;
+        padding-right: 37px;
+        padding-left: 20px;
+    }
+    
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText p{
+        font-size: 12px;
+        line-height: 1.5;
+        }
+
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg{
+        position: absolute;
+        top: 10%;
+        right: -23%;
+        height: 40%;
+        }
+
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg img{
+        height: 100%;
+        border-radius: 20px;
+        }
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg .outline{
+        height: 90%;
+        width: 90%;
+        border: 2px solid rgba(0, 107, 56, 1);
+        }
+    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText img{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 30px;
+        }
+}
+
+@media only screen and (max-width: 410px){
+    .slider span {
+            transform: rotateY(calc(var(--i)*70deg)) translateZ(140px);
+        }
+    
+}
+
+@media only screen and (max-width: 360px){
+    .slider {
+            right: 40%;
+            width: 100px;
+            height: 100px;
+        }
+    
+    .slider span {
+            transform: rotateY(calc(var(--i)*70deg)) translateZ(140px);
+        }
+    .slider span p{
+        font-size: 0.7rem;
+        }    
+    #testimoniesPage .TestimoniesContainer {
+        top: 200%;
+        left: -25%;
+        padding-left: 70vw;
+        }
+
+    #testimoniesPage .TestimoniesContainer .indicator{
+        margin-left: 75vw;
+        }
+}
+
