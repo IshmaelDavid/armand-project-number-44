@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://kit.fontawesome.com/44360990a6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
@@ -16,6 +24,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>GREEN REALTORS LTD</title>
+
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <div id="preloader"></div>
@@ -216,6 +230,9 @@
               Our mission is to serve you with integrity, value, and
               professionalism so that you can get wht you deserve.
             </p>
+            <button type="button" onclick="openPopUp();">
+              Request a quote
+            </button>
           </div>
         </div>
 
@@ -232,6 +249,9 @@
               business management firm emphasizing on good service and customer
               satisfaction.
             </p>
+            <button type="button" onclick="openPopUp();">
+              Request a quote
+            </button>
           </div>
         </div>
 
@@ -246,6 +266,9 @@
               management firm emphasizing on good service and customer
               satisfaction.
             </p>
+            <button type="button" onclick="openPopUp();">
+              Request a quote
+            </button>
           </div>
         </div>
 
@@ -260,11 +283,14 @@
               management firm emphasizing on good service and customer
               satisfaction.
             </p>
+            <button type="button" onclick="openPopUp();">
+              Request a quote
+            </button>
           </div>
         </div>
       </div>
     </section>
-    <section id="testimoniesPage">
+    <!-- <section id="testimoniesPage">
       <h3>What our clients say about us</h3>
 
       <div class="TestimoniesContainer">
@@ -346,20 +372,131 @@
           </div>
         </div>
       </div>
-    </section>
-    <section id="aboutUsPage"></section>
+    </section> -->
+    <!-- <section id="contactUsPage">
+      <div><p>HELLO</p></div>
+    </section> -->
 
-    <!-- <div class="popUpForm">
-      <form action="">
+    <!-- <section id="testimoniesPage"></section> -->
+
+    <div class="popUpForm hide" id="popUpForm">
+      <i class="fa-solid fa-circle-xmark" onclick="hideMe();"></i>
+      <form
+        id="contactForm"
+        action="https://formspree.io/f/mrgjjwww"
+        method="POST"
+      >
         <h3>Contact us</h3>
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Your name">
+        <input
+          name="name"
+          class="field"
+          type="text"
+          id="name"
+          placeholder="Your name"
+          required
+          autofocus
+        />
 
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Your email">
+        <input
+          name="Email"
+          class="field"
+          type="email"
+          id="email"
+          placeholder="Your email"
+          required
+        />
+
+        <input
+          name="Phone"
+          class="field"
+          type="text"
+          id="phone"
+          placeholder="Your phone"
+          required
+        />
+
+        <textarea
+          name="Message"
+          class="field"
+          id="message"
+          cols="30"
+          rows="5"
+          placeholder="How can we help you?"
+          required
+        ></textarea>
+
+        <button type="submit">SEND</button>
       </form>
-    </div> -->
+      <div id="success" class="hide">
+        <p style="background-color: red">hello</p>
+      </div>
+    </div>
+
+    <section id="testimoniesPage">
+      <div class="container">
+        <h3>What our client say about us</h3>
+        <div class="wrapper">
+          <div class="card">
+            <div class="cardThumb">
+              <img src="dorrell-tibbs-GntSiIMHyVM-unsplash.jpg" alt="" />
+              <span class="clientName">Ishmael Dushimimana</span>
+            </div>
+            <div class="cardBody">
+              <p class="review">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+                maiores quae nobis dolore animi dolor omnis repellendus
+                exercitationem doloremque earum.
+              </p>
+              <div class="genderIcon">
+                <img src="undraw_handcrafts_man (2).svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="cardThumb">
+              <img src="dorrell-tibbs-GntSiIMHyVM-unsplash.jpg" alt="" />
+              <span class="clientName">Alice Ruth</span>
+            </div>
+            <div class="cardBody">
+              <p class="review">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+                maiores quae nobis dolore animi dolor omnis repellendus
+                exercitationem doloremque earum.
+              </p>
+              <div class="genderIcon">
+                <img src="undraw_handcrafts_man (2).svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="cardThumb">
+              <img src="dorrell-tibbs-GntSiIMHyVM-unsplash.jpg" alt="" />
+              <span class="clientName">Jane Ritha</span>
+            </div>
+            <div class="cardBody">
+              <p class="review">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+                maiores quae nobis dolore animi dolor omnis repellendus
+                exercitationem doloremque earum.
+              </p>
+              <div class="genderIcon">
+                <img src="undraw_handcrafts_woman (2).svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="indicators">
+            <button class="active"></button>
+            <button></button>
+            <button></button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="index.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>

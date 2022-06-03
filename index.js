@@ -1,4 +1,4 @@
-var loader = document.getElementById('preloader');
+let loader = document.getElementById('preloader');
 window.addEventListener('load', function(){
 	loader.style.display = 'none';
 })
@@ -20,7 +20,6 @@ function disappearScroll(){
     else{
         scrollBlock.style.display="none";
     }
-    console.log('hello');
 }
 
 
@@ -54,37 +53,61 @@ const navSlide = () => {
 
 navSlide();
 
-let testimoniesBtn = document.getElementsByClassName('Tbtn');
-let slide = document.getElementById('slide');
+// let testimoniesBtn = document.getElementsByClassName('Tbtn');
+// let slide = document.getElementById('slide');
 
-testimoniesBtn[0].onclick = function(){
-	slide.style.transform = "translateX(0px)";
-	for(i=0; i<4; i++){
-		testimoniesBtn[i].classList.remove('active');
-	}
-	this.classList.add('active');
+// testimoniesBtn[0].onclick = function(){
+// 	slide.style.transform = "translateX(0px)";
+// 	for(i=0; i<4; i++){
+// 		testimoniesBtn[i].classList.remove('active');
+// 	}
+// 	this.classList.add('active');
+// }
+
+// testimoniesBtn[1].onclick = function(){
+// 	slide.style.transform = "translateX(-800px)";
+// 	for(i=0; i<4; i++){
+// 		testimoniesBtn[i].classList.remove('active');
+// 	}
+// 	this.classList.add('active');
+// }
+
+// testimoniesBtn[2].onclick = function(){
+// 	slide.style.transform = "translateX(-1600px)";
+// 	for(i=0; i<4; i++){
+// 		testimoniesBtn[i].classList.remove('active');
+// 	}
+// 	this.classList.add('active');
+// }
+
+// testimoniesBtn[3].onclick = function(){
+// 	slide.style.transform = "translateX(-2400px)";
+// 	for(i=0; i<4; i++){
+// 		testimoniesBtn[i].classList.remove('active');
+// 	}
+// 	this.classList.add('active');
+// }
+
+function openPopUp(){
+	document.getElementById("popUpForm").classList.remove("hide");
 }
 
-testimoniesBtn[1].onclick = function(){
-	slide.style.transform = "translateX(-800px)";
-	for(i=0; i<4; i++){
-		testimoniesBtn[i].classList.remove('active');
-	}
-	this.classList.add('active');
+function hideMe(){
+	document.getElementById("popUpForm").classList.add("hide");
+	document.getElementById("contactForm").reset();
 }
 
-testimoniesBtn[2].onclick = function(){
-	slide.style.transform = "translateX(-1600px)";
-	for(i=0; i<4; i++){
-		testimoniesBtn[i].classList.remove('active');
-	}
-	this.classList.add('active');
-}
 
-testimoniesBtn[3].onclick = function(){
-	slide.style.transform = "translateX(-2400px)";
-	for(i=0; i<4; i++){
-		testimoniesBtn[i].classList.remove('active');
-	}
-	this.classList.add('active');
-}
+const wrapper = document.querySelector('.wrapper');
+const indicators = [...document.querySelectorAll('.indicators button')];
+
+let currentTestimonial = 0;
+
+indicators.forEach((item, i) => {
+	item.addEventListener('click' , () =>{
+		indicators[currentTestimonial].classList.remove('active');
+		wrapper.style.marginLeft = `-${100 * i}%`;
+		item.classList.add('active');
+		currentTestimonial = i;
+	})
+})
