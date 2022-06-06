@@ -53,46 +53,12 @@ const navSlide = () => {
 
 navSlide();
 
-// let testimoniesBtn = document.getElementsByClassName('Tbtn');
-// let slide = document.getElementById('slide');
-
-// testimoniesBtn[0].onclick = function(){
-// 	slide.style.transform = "translateX(0px)";
-// 	for(i=0; i<4; i++){
-// 		testimoniesBtn[i].classList.remove('active');
-// 	}
-// 	this.classList.add('active');
-// }
-
-// testimoniesBtn[1].onclick = function(){
-// 	slide.style.transform = "translateX(-800px)";
-// 	for(i=0; i<4; i++){
-// 		testimoniesBtn[i].classList.remove('active');
-// 	}
-// 	this.classList.add('active');
-// }
-
-// testimoniesBtn[2].onclick = function(){
-// 	slide.style.transform = "translateX(-1600px)";
-// 	for(i=0; i<4; i++){
-// 		testimoniesBtn[i].classList.remove('active');
-// 	}
-// 	this.classList.add('active');
-// }
-
-// testimoniesBtn[3].onclick = function(){
-// 	slide.style.transform = "translateX(-2400px)";
-// 	for(i=0; i<4; i++){
-// 		testimoniesBtn[i].classList.remove('active');
-// 	}
-// 	this.classList.add('active');
-// }
-
 function openPopUp(){
+	document.getElementById('contactForm').reset();
 	document.getElementById("popUpForm").classList.remove("hide");
 }
 
-function hideMe(){
+function hidePopUp(){
 	document.getElementById("popUpForm").classList.add("hide");
 	document.getElementById("contactForm").reset();
 }

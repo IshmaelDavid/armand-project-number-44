@@ -864,7 +864,7 @@ nav {
 .menu{
     display: flex;
     border-radius: 20px;
-    background: linear-gradient(to left, rgba(16, 24, 32, 0.7),rgba(0, 107, 56, 0.7));
+    background: var(--darkGreen);
     padding: 48px;
 }
 
@@ -1115,7 +1115,7 @@ nav {
     display: flex;
     justify-content: space-between;
     max-width: 900px;
-    margin-top: 20px;
+    margin-top: 70px;
     padding: 0 30px;
 }
 .about img:only-of-type{
@@ -1154,9 +1154,7 @@ nav {
 #aboutUsPage .about .aboutContent p{
     font-size: 14px;
     text-align: justify;
-    background-image: linear-gradient(to left, var(--lightBlue), var(--lightBlue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--lightBlue);
 }
 
 #aboutUsPage .about .aboutContent p::first-letter,
@@ -1260,9 +1258,7 @@ nav {
 
 #servicesPage .servicesContainer .serviceBlock .serviceContent p{
     padding-top: 30px;
-    background-image: linear-gradient(to right, var(--lightBlue), var(--lightBlue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--lightBlue);
     font-size: 14px;
 }
 
@@ -1417,133 +1413,154 @@ nav {
 }
 
 
+/* CONTACT US AND MAP SECTION */
 
-
-
-
-/* #testimoniesPage{
-    margin-top: 20px;
-    width: 100vw;
-    text-align: center;
-    position: relative;
-} */
-
-/* There was a bug here */
-/* #testimoniesPage .TestimoniesContainer {
-    width: 800px;
-    height: 400px;
-    position: absolute;
-    top: 200%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-} 
-
-#testimoniesPage .TestimoniesContainer .indicator{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 15%;
+#contactUsPage{
+    width: 100%;
+    margin: 40px 0;
+    padding: 0 10px;
+    height: auto;
 }
 
-#testimoniesPage .TestimoniesContainer .indicator .Tbtn{
-    display: inline-block;
-    height: 10px;
-    width: 10px;
-    margin: 2px;
+#contactUsPage h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contactUsPage .contactBoxMain{
+    display: flex;
+    justify-content: space-between;
+}
+
+#contactUsPage .contactBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgba(252, 215, 112, 0), rgba(252, 215, 112, 0.6));
+    height: 300px;
+}
+
+#contactUsPage .contactBox .contactImage{
+    position: absolute;
+    left: 20%;
+    height: 200px;
+    margin-top: 20px;
+    min-height: 10px;
+}
+
+#contactUsPage .contactBox .contactImage img{
+    height: 100%;
+}
+
+#contactUsPage .contactBox .contactInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 300px;
+    padding-right: 10vw;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: end;
+}
+
+#contactUsPage .contactBox .contactInfo div{
+    display: flex;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    justify-content: end;
+    align-items: center;
+}
+
+#contactUsPage .contactBox .contactInfo div i{
+    margin-left: 10px;
+    color: var(--lightWood);
+}
+
+#contactUsPage .contactBox .contactInfo div p{
+    color: var(--lightBlue);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#contactUsPage .contactBox button{
+    margin-bottom: 20px;
+    padding: 10px 30px;
     border-radius: 10px;
     background-color: var(--lightWood);
+    color: var(--darkGreen);
+    border: 2px solid transparent;
+    outline: none;
+    font-weight: bolder;
     cursor: pointer;
-    transition: 0.5s ease-in-out;
+    transition: 0.6s;
 }
 
-#testimoniesPage .TestimoniesContainer .indicator .active {
-    width: 25px;
+#contactUsPage .contactBox button:hover{
+    background-color: transparent;
+    color: var(--lightBlue);
+    border: 2px solid var(--lightBlue);
 }
 
-#testimoniesPage .TestimoniesContainer .testimonial{
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
 
-#testimoniesPage .TestimoniesContainer .testimonial .slideRow{
+#contactUsPage .mapLocation{
     display: flex;
-    width: 3200px;
-    transition: 0.5s;
+    width: 40%;
 }
 
-#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol{
-    width: 600px;
+#contactUsPage .mapLocation iframe{
+    width: 100%;
+    border-radius: 20px;
     height: 300px;
-    margin: 0 100px;
-    position: relative;
 }
 
-#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg{
-    position: relative;
-    position: absolute;
-    top: 0;
-    right: 0;
+#contactUsPage .creditation{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 60px;
+    width: 240px;
+    height: 40px;
+    border-radius: 20px;
+    padding-right: 10px;
+    border: 2px solid rgba(252, 215, 112, .5);
+}
+
+#contactUsPage .creditation p{
+    font-size: 10px;
+    color: var(--lightWood);
+}
+
+#contactUsPage .creditation p span{
+     background-image: linear-gradient(to right, var(--darkGreen), 30%, var(--lightWood));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#contactUsPage .creditation a{
+    text-decoration: none;
     height: 100%;
+    display: flex;
+    align-items:flex-start;
 }
 
-#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg img{
-    height: 100%;
+#contactUsPage .creditation a img{
+    height: 38px;
+    width: 38px;
+    object-fit: cover;
+    margin-right: 6px;
     border-radius: 20px;
+    cursor: pointer;
 }
-
-#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg .outline{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 97%;
-    width: 97%;
-    transform: translate(-50%, -50%);
-    border-radius: 20px;
-    border: 4px solid rgba(0, 107, 56, 1);
-}
-
-#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText{
-    background: linear-gradient(to left, rgba(252, 215, 112, 0), rgba(252, 215, 112, 0.6));
-    width: 430px;
-    height: 270px;
-    text-align: left;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 20px;
-    color: #d3d4d6;
-    padding: 35px;
-    padding-right: 60px;
-    box-sizing: border-box;
-    z-index: 2;
-    position: relative;
-}
-
-#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText p{
-    font-size: 14px;
-    line-height: 24px;
-    color: var(--lightBlue);
-}
-
-#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText h3{
-    margin: 15px 0 5px;
-    color: var(--lightBlue);
-    font-size: 16px;
-}
-
-#testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText img{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 60px;
-} */
-
-
-
-
-
 
 
 /* POP UP PAGE FOR CONTACT FORM */
@@ -1641,6 +1658,15 @@ nav {
 }
 
 
+.forHeader h3:first-child {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    background-image: linear-gradient(to right, var(--lightWood), var(--lightBlue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 /* MEDIA QUERRIES AND RESPONSIVENESS */
 
@@ -1674,6 +1700,9 @@ nav {
     .slider span {
             transform: rotateY(calc(var(--i)*70deg)) translateZ(200px);
         }
+    #contactUsPage .contactBox .contactInfo{
+     padding-right: 4vw;
+}
 }
 
 @media only screen and (max-width: 950px){
@@ -1785,6 +1814,17 @@ nav {
         width: 30px;
         margin-right: 0px;
     }
+
+    #contactUsPage .contactBoxMain{
+        flex-direction: column;
+    }
+    #contactUsPage .contactBoxMain .contactBox,
+    #contactUsPage .contactBoxMain .mapLocation{
+        width: 90%;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 
@@ -1807,6 +1847,7 @@ nav {
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin-top: 20px;
     }
     
     #aboutUsPage .about .aboutContent .mission{
@@ -1819,29 +1860,7 @@ nav {
     #servicesPage .servicesContainer .serviceBlock{
         width: 50%;
     }
-    /* #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol{
-        width: 500px;
-        height: 300px;
-        margin: 0 150px;
-        position: relative;
-        }
-    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText{
-        width: 350px;
-        padding: 35px;
-        height: 100%;
-        padding-right: 60px;
-        }  
-    #testimoniesPage .TestimoniesContainer {
-        top: 200%;
-        left: -10%;
-        padding-left: 60vw;
-        }
-
-    #testimoniesPage .TestimoniesContainer .indicator{
-        margin-left: 60vw;
-        } */
-     
-}
+   }
 
 @media only screen and (max-width: 570px){
     .slider{
@@ -1859,39 +1878,11 @@ nav {
     #aboutUsPage .about .aboutContent p{
         text-align: center;
         }
-    /* #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol{
-        width: 300px;
-        height: 300px;
-        margin: 0 250px;
-        position: relative;
-        } */
-    /* #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText{
-        width: 100%;
-        height: 100%;
-        padding-right: 30px;
-        padding-left: 35px;
-        }
-    
-    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText p{
-        font-size: 12px;
-        }
-
-    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg{
-        position: absolute;
-        top: 10%;
-        right: -23%;
-        height: 40%;
-        }
-
-    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg img{
-        height: 100%;
-        border-radius: 20px;
-        }
-    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg .outline{
-        height: 90%;
-        width: 90%;
-        border: 2px solid rgba(0, 107, 56, 1);
-        }  */
+    #contactUsPage .contactBox .contactImage{
+        left: 0%;
+        top: 0%;
+        height: 200px;
+    } 
 }
 
 @media only screen and (max-width: 470px) {
@@ -1906,53 +1897,29 @@ nav {
     }
     .slider span p{
         font-size: 0.8rem;
-        } 
-    /* #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol{
-        width: 200px;
-        height: 300px;
-        margin: 0 300px;
-        }
-
-    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText{
-        padding-top: 10px;
-        padding-right: 37px;
-        padding-left: 20px;
     }
-    
-    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText p{
-        font-size: 12px;
-        line-height: 1.5;
-        }
+    #contactUsPage .contactBox .contactImage{
+        left: 0%;
+        top: 20%;
+        height: 120px;
+    } 
+    #contactUsPage .contactBox .contactInfo{
+        justify-content: space-around;
+        padding-right: 6vw;
+    }
 
-    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg{
-        position: absolute;
-        top: 10%;
-        right: -23%;
-        height: 40%;
-        }
-
-    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg img{
-        height: 100%;
-        border-radius: 20px;
-        }
-    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userImg .outline{
-        height: 90%;
-        width: 90%;
-        border: 2px solid rgba(0, 107, 56, 1);
-        }
-    #testimoniesPage .TestimoniesContainer .testimonial .slideRow .slideCol .userText img{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 30px;
-        } */
+    #contactUsPage .contactBox .contactInfo div{
+        display: flex;
+        margin-bottom: 6px;
+        justify-content: end;
+        align-items: center;
 }
 
-/* #testimoniesPage{
-    height: 800px;
-    width: 100vw;
-    background-color: aqua;
-} */
+    #contactUsPage .contactBox .contactInfo div p,
+    #contactUsPage .contactBox .contactInfo div i{
+        font-size: 12px   
+    }
+}
 
 @media only screen and (max-width: 410px){
     .slider span {
@@ -1962,6 +1929,9 @@ nav {
 }
 
 @media only screen and (max-width: 360px){
+    .menu{
+	  	right: -15px;
+        }
     .slider {
             right: 34%;
             width: 100px;
@@ -1973,15 +1943,11 @@ nav {
         }
     .slider span p{
         font-size: 0.7rem;
-        }    
-    /* #testimoniesPage .TestimoniesContainer {
-        top: 200%;
-        left: -25%;
-        padding-left: 70vw;
-        }
-
-    #testimoniesPage .TestimoniesContainer .indicator{
-        margin-left: 75vw;
-        } */
+        }  
+    #contactUsPage .contactBox .contactInfo div p,
+    #contactUsPage .contactBox .contactInfo div i{
+        font-size: 11px;
+        font-weight: 700;  
+    }  
 }
 
