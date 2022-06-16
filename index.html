@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- FOR FONTAWESOME -->
     <script
       src="https://kit.fontawesome.com/44360990a6.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- FOR SWIPPING TESTIMONIES SECTION, AN OPEN SOURCE -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
-    />
+
+    <!-- FOR GOOGLE FONTS (POPPINS) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,19 +23,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- lINKED STYLE SHEET -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- SHORTCUT ICON  -->
     <link rel="shortcut icon" href="GREEN REALTORS NEW LOGO.png" />
     <title>Green Realtors Ltd</title>
 
     <style>
+      /* FOR POP FORM FOR CONTACT SECTION */
       .hide {
         display: none;
       }
     </style>
   </head>
   <body>
+    <!-- PRE-LOADER PAGE BEFORE THE WEB IS LOADED -->
     <div id="preloader"></div>
 
+    <!-- MOVING OBJECTS BEHIND THE SCREEN -->
     <div class="movingObjects">
       <div class="object1"></div>
       <div class="object2"></div>
@@ -77,6 +85,7 @@
         </div>
       </div>
 
+      <!-- BURGER MENU, VISIBLE AT A CERTAIN SCREEN -->
       <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -84,25 +93,32 @@
       </div>
     </nav>
 
+    <!-- FIXED SOCIAL MEDIA ICONS -->
     <div class="socialMedia">
-      <a href=""
+      <a
+        href="https://www.linkedin.com/company/green-realtors-ltd/"
+        target="_blank"
         ><img class="linkedinIcon" src="linkedin-svgrepo-com.svg" alt=""
       /></a>
-      <a href="">
+      <a href="https://twitter.com/green_realtors1" target="_blank">
         <img class="twitterIcon" src="twitter-svgrepo-com (1).svg" alt="" />
       </a>
-      <a href="">
+      <a href="https://www.facebook.com/thegreenrealtors" target="_blank">
         <img class="facebookIcon" src="facebook-svgrepo-com.svg" alt="" />
       </a>
     </div>
 
+    <!-- FIXED BACK TO TOP BUTTON -->
     <div class="backToTop" id="backToTop">
       <img onclick="toTop();" src="undraw_handcrafts_arrow.svg" alt="" />
       <p>back to top</p>
     </div>
 
+    <!-- HOMEPAGE PAGE THAT CONTAINS MOST OF ANIMATIONS -->
     <section id="homePage">
+      <!-- Container that contains left part of animations -->
       <div class="animationContainer">
+        <!-- The container that contains moving car and buildings -->
         <div class="movingLogoBox">
           <img src="cityscape.png" alt="cityscape.png" />
           <img src="buildings.png" alt="buildings.png" />
@@ -110,12 +126,15 @@
           <img src="eiffel-tower.png" alt="eiffel-tower.png" />
           <img src="vehicle.png" alt="vehicle.png" />
         </div>
+        <!-- The container that contains 3 animated words -->
         <div class="movingText">
-          <h3>Reliable</h3>
-          <h3>Precise</h3>
-          <h3>Affordable</h3>
+          <h3>Reliability</h3>
+          <h3>Professionalism</h3>
+          <h3>Integrity</h3>
+          <h3>Excellence</h3>
         </div>
       </div>
+      <!-- The container that contains rotating images -->
       <div class="sliderBox">
         <div class="slider">
           <span style="--i: 1"
@@ -158,6 +177,9 @@
         </div>
       </div>
     </section>
+    <!-- END OF HOME PAGE -->
+
+    <!-- SECTION THAT CONTAINS ABOUS US INFORMATION -->
     <section id="aboutUsPage" class="forHeader">
       <h3>We are your solution</h3>
       <div class="firstAbout about">
@@ -166,12 +188,9 @@
           <div class="mission">
             <img src="undraw_handcrafts_play.svg" alt="" />
             <h6>Our mission</h6>
-            <p>
-              Our mission is to serve you with integrity, value, and
-              professionalism so that you can get wht you deserve
-            </p>
+            <p>To provide professional services with high quality standards.</p>
           </div>
-          <div class="mission">
+          <div class="mission vision">
             <img src="undraw_handcrafts_search.svg" alt="" />
             <h6>Our vision</h6>
             <p>
@@ -185,10 +204,10 @@
       <div class="secondAbout about">
         <div class="secondAboutContent aboutContent">
           <img src="undraw_handcrafts_number_one.svg" alt="" />
-          <h6>We are reliable</h6>
+          <h6>Reliability</h6>
           <p>
-            Our mission is to serve you with integrity, value, and
-            professionalism so that you can get wht you deserve
+            Promising to meet client expectations within budget, instantly, at
+            all times.
           </p>
         </div>
         <img src="undraw_security_on_re_e491.svg" alt="" />
@@ -197,30 +216,33 @@
         <img src="undraw_certificate_re_yadi.svg" alt="" />
         <div class="thirdAboutContent aboutContent">
           <img src="undraw_handcrafts_star.svg" alt="" />
-          <h6>We are experienced</h6>
+          <h6>Professionalism</h6>
           <p>
-            Our mission is to serve you with integrity, value, and
-            professionalism so that you can get wht you deserve
+            Dedicated to using best qualified professionals, who demonstrate
+            leadership in the market, and comprehensive valuations expertise.
           </p>
         </div>
       </div>
       <div class="forthAbout about">
         <div class="forthAboutContent aboutContent">
           <img src="undraw_handcrafts_mouse_arrow.svg" alt="" />
-          <h6>We are affordable</h6>
+          <h6>Integrity</h6>
           <p>
-            Our mission is to serve you with integrity, value, and
-            professionalism so that you can get wht you deserve
+            Devoted to ethical behaviour, accurate and unbiassed valuations,
+            best practice and trusted services.
           </p>
         </div>
         <img src="undraw_savings_re_eq4w.svg" alt="" />
       </div>
     </section>
+    <!-- END OF ABOUT US SECTION -->
 
+    <!-- SECTION THAT CONTAINS SERVICES INFORMATION -->
     <section id="servicesPage" class="forHeader">
       <h3>What you will get from us</h3>
 
       <div class="servicesContainer">
+        <!-- One service block -->
         <div class="serviceBlock">
           <div class="serviceImg">
             <img src="undraw_handcrafts_house.svg" alt="" />
@@ -228,8 +250,8 @@
           <div class="serviceContent">
             <h4>Property valuation</h4>
             <p>
-              Our mission is to serve you with integrity, value, and
-              professionalism so that you can get wht you deserve.
+              We help you assess the accurate value of your property for sales
+              and purchase, tax, mortgage, insurance, and conflict resolution.
             </p>
             <button type="button" onclick="openPopUp();">
               Request a quote
@@ -244,11 +266,8 @@
           <div class="serviceContent">
             <h4>Project management</h4>
             <p>
-              Becoming the best African professional valuers and business
-              management firm emphasizing on good service and customer
-              satisfaction. ecoming the best African professional valuers and
-              business management firm emphasizing on good service and customer
-              satisfaction.
+              We make sure that what is delivered is bright, we excel in helping
+              you plan your project better and in easy manner.
             </p>
             <button type="button" onclick="openPopUp();">
               Request a quote
@@ -261,11 +280,12 @@
             <img src="undraw_handcrafts_growth.svg" alt="" />
           </div>
           <div class="serviceContent">
-            <h4>Quantity survey</h4>
+            <h4>Property management</h4>
             <p>
-              Becoming the best African professional valuers and business
-              management firm emphasizing on good service and customer
-              satisfaction.
+              We advise on safety regulations, quick occupancy rate, and high
+              rental value. We make sure your property is well maintained and
+              stays in good aestetic. We ensure that the rent is pain on time
+              and provide a robust tenancy agreement.
             </p>
             <button type="button" onclick="openPopUp();">
               Request a quote
@@ -280,9 +300,8 @@
           <div class="serviceContent">
             <h4>architectural consultancy.</h4>
             <p>
-              Becoming the best African professional valuers and business
-              management firm emphasizing on good service and customer
-              satisfaction.
+              We help you determine exactly what you need by coming up with
+              innovative ideas to solve the most complex design problems.
             </p>
             <button type="button" onclick="openPopUp();">
               Request a quote
@@ -291,21 +310,24 @@
         </div>
       </div>
     </section>
+    <!-- END OF SERVICES SECTION -->
 
+    <!-- TESTIMONIES SECTION -->
     <section id="testimoniesPage" class="forHeader">
       <div class="container">
         <h3>What our clients say about us</h3>
         <div class="wrapper">
+          <!-- One testimony block -->
           <div class="card">
             <div class="cardThumb">
-              <img src="dorrell-tibbs-GntSiIMHyVM-unsplash.jpg" alt="" />
-              <span class="clientName">Ishmael Dushimimana</span>
+              <img src="WhatsApp Image 2022-06-16 at 3.30.44 PM.jpeg" alt="" />
+              <span class="clientName">Deus Sebabo / CHIC</span>
             </div>
             <div class="cardBody">
               <p class="review">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-                maiores quae nobis dolore animi dolor omnis repellendus
-                exercitationem doloremque earum.
+                Green realtors ltd has served me well, it is a highly
+                professional entity with zeal to offer exuberant services in the
+                real estate sectors. Their services are impeccable.
               </p>
               <div class="genderIcon">
                 <img src="undraw_handcrafts_man (2).svg" alt="" />
@@ -315,14 +337,14 @@
 
           <div class="card">
             <div class="cardThumb">
-              <img src="dorrell-tibbs-GntSiIMHyVM-unsplash.jpg" alt="" />
-              <span class="clientName">Alice Ruth</span>
+              <img src="WhatsApp Image 2022-06-16 at 4.38.49 PM.jpeg" alt="" />
+              <span class="clientName">Arnold Bulangarire / Landmark</span>
             </div>
             <div class="cardBody">
               <p class="review">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-                maiores quae nobis dolore animi dolor omnis repellendus
-                exercitationem doloremque earum.
+                I had better services from Green Realtors when they valued my
+                plot of land, not only are they showing professionalism but also
+                get the done work as soon as possible.
               </p>
               <div class="genderIcon">
                 <img src="undraw_handcrafts_man (2).svg" alt="" />
@@ -332,14 +354,15 @@
 
           <div class="card">
             <div class="cardThumb">
-              <img src="dorrell-tibbs-GntSiIMHyVM-unsplash.jpg" alt="" />
-              <span class="clientName">Jane Ritha</span>
+              <img src="WhatsApp Image 2022-06-16 at 4.46.30 PM.jpeg" alt="" />
+              <span class="clientName">Solange Umwizerwa / RAMU</span>
             </div>
             <div class="cardBody">
               <p class="review">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-                maiores quae nobis dolore animi dolor omnis repellendus
-                exercitationem doloremque earum.
+                I recently shifted my collaboration with Green Realtors, but I
+                noticed a big difference between them and others! They are very
+                reliable and they tremendously take a good care of your property
+                like it's theirs with professionalism and amazing creativity.
               </p>
               <div class="genderIcon">
                 <img src="undraw_handcrafts_woman (2).svg" alt="" />
@@ -347,6 +370,7 @@
             </div>
           </div>
 
+          <!-- Clickable buttons to navigate through Testimonies -->
           <div class="indicators">
             <button class="active"></button>
             <button></button>
@@ -355,33 +379,36 @@
         </div>
       </div>
     </section>
+    <!-- END OF TESTIMONIES SECTION -->
 
+    <!-- CONTACT US SECTION -->
     <section id="contactUsPage" class="forHeader">
       <h3>You can find us here</h3>
       <div class="contactBoxMain">
+        <!-- Box that contains contact information -->
         <div class="contactBox">
           <div class="contactImage">
             <img src="undraw_handcrafts_smartphone.svg" alt="" />
           </div>
           <div class="contactInfo">
             <div class="phoneContact">
-              <p>Lorem, ipsum.</p>
+              <p>+250 784 170 771</p>
               <i class="fas fa-phone"></i>
             </div>
             <div class="emailContact">
-              <p>Lorem, ipsum.</p>
+              <p>thegreenrealtors@gmail.com</p>
               <i class="fas fa-at"></i>
             </div>
             <div class="linkedinContact">
-              <p>Lorem, ipsum.</p>
+              <p>Green Realtors Ltd</p>
               <i class="fab fa-linkedin"></i>
             </div>
             <div class="twitterContact">
-              <p>dishmaeldavid@gmail.com</p>
+              <p>@green_realtors1</p>
               <i class="fab fa-twitter"></i>
             </div>
             <div class="facebookContact">
-              <p>Lorem, ipsum.</p>
+              <p>@thegreenrealtors</p>
               <i class="fab fa-facebook"></i>
             </div>
           </div>
@@ -392,9 +419,10 @@
           </div>
         </div>
 
+        <!-- Box that contains map -->
         <div class="mapLocation">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12980.238003848013!2d30.079111466320647!3d-1.940994181866743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca69557bd15e7%3A0xc32a5f5e65132217!2sKamatamu%2C%20Kigali!5e1!3m2!1sen!2srw!4v1654509335384!5m2!1sen!2srw"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d964.7622559146972!2d30.060776138558214!3d-1.940478683759743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca417cd15d783%3A0xef04a0a83c5aac29!2sKN%201%20Rd%2C%20Kigali!5e1!3m2!1sen!2srw!4v1655398823382!5m2!1sen!2srw"
             width="600"
             height="450"
             style="border: 0"
@@ -404,6 +432,7 @@
           ></iframe>
         </div>
       </div>
+      <!-- Box that contains the name of the developer of this website -->
       <div class="creditation">
         <a
           href="https://www.linkedin.com/in/ishmael-david-dushimimana-542709147/"
@@ -413,12 +442,15 @@
         <p>Designed by <span>Ishmael David</span></p>
       </div>
     </section>
+    <!-- END OF CONTACT US SECTION -->
 
+    <!-- POP UP FORM THAT IS DISPLAYED ONLY WHEN A BUTTON IS CLICKED -->
     <div class="popUpForm hide" id="popUpForm">
+      <!-- A button to close the pop up form -->
       <i class="fa-solid fa-circle-xmark" onclick="hidePopUp();"></i>
       <form
         id="contactForm"
-        action="https://formspree.io/f/mrgjjwww"
+        action="https://formspree.io/f/mpzbngqw"
         method="POST"
       >
         <h3>Contact us</h3>
@@ -462,12 +494,13 @@
 
         <button type="submit">SEND</button>
       </form>
-      <div id="success" class="hide">
-        <p style="background-color: red">hello</p>
-      </div>
     </div>
 
+    <!-- EXTERNAL JAVASCRIPT FILE -->
     <script src="index.js"></script>
+    <!-- CALLBACK SCRIPT FOR TESTIMONIES SWIPPING BOX -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
+
+<!-- END OF FILE -->
